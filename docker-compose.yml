@@ -14,8 +14,8 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - E:\Develop\projects\docker-web:/var/www/home
-#      - "/E/Develop/projects/docker-web:/var/www/home"
+#      - /Users/IdeaProjects/home:/var/www/home # mac
+      - /E/Develop/projects/docker-web:/var/www/home # windows
 #    command: /usr/sbin/sshd -D
     ports:
       - "80:80"

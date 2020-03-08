@@ -9,7 +9,8 @@
 ##### docker-compose.yml 파일을 열고 아래 부분의 경로를 수정
 * /Users/IdeaProjects/ < 이 부분을 본인의 경로에 맞게 수정
 <pre><code>volumes:
-  - "/Users/IdeaProjects/home:/var/www/home"
+  - /Users/IdeaProjects/home:/var/www/home
+  - /E/Develop/projects/docker-web:/var/www/home 
 </code></pre>
 
 ### host 추가<a id="host-add"></a>
