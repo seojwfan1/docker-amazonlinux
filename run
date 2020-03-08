@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+#PHP_ERROR_REPORTING=${PHP_ERROR_REPORTING:-"E_ALL"}
+#sed -ri 's/^display_errors\s*=\s*Off/display_errors = On/g' /etc/php.ini # display_errors = On
+#sed -ri 's/^short_open_tag\s*=\s*Off/short_open_tag = On/g' /etc/php.ini # short_open_tag = On
+#sed -ri "s/^error_reporting\s*=.*$//g" /etc/php.ini
+#echo "error_reporting = $PHP_ERROR_REPORTING" >> /etc/php.ini
+
+#sed -i '/\ #PHP Enable/a \ AddType application/x-httpd-php .php .jsp .html' /etc/httpd/conf/httpd.conf
+#sed -i '/\ #PHP Enable/a \ AddType application/x-httpd-php .htm .html' /etc/httpd/conf.d/php.conf
+#sed -ri 's/^short_open_tag\s*=\s*Off/short_open_tag = On/g' /etc/httpd/conf/httpd.conf
+#echo 'AddType application/x-httpd-php .htm .html' >> /etc/httpd/conf.d/php.conf
+
+exec /usr/sbin/apachectl -DFOREGROUND
+
